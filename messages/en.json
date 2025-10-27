@@ -6,5 +6,12 @@
     "about": "About",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "FirstPatr": {
+    "Avilble": "Available Work",
+    "name": "I'm Abdullah Atef",
+    "job": "Software Engineer",
+    "locatioon": "Egypt Cairo",
+    "dec": "I am Abdallah, a passionate software engineer specializing in full-stack development. With expertise in both frontend and backend technologies, I create robust, scalable, and user-friendly applications. I enjoy solving complex problems and continuously learning new technologies to stay at the forefront of software development. My goal is to write clean, efficient code and contribute to meaningful projects that make a difference."
   }
 }

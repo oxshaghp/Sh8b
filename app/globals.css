@@ -44,6 +44,8 @@
 }
 
 :root {
+  --p_text: oklab(100% 0 5.96046e-8/0.6);
+  --loc: #fabc9b;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

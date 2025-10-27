@@ -7,6 +7,7 @@ import "../globals.css";
 import { ThemeProvider } from "next-themes";
 import LeftContent from "@/components/LeftContent";
 import AnimatedCursor from "@/components/ui/AnimatedCursor";
+import LenisProvider from "@/components/ui/LenisProvider";
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -49,18 +50,20 @@ export default async function LocaleLayout({ children, params }: Props) {
             enableSystem
             disableTransitionOnChange
           >
-            <div className="flex flex-col sm:flex-row min-h-screen">
-              <AnimatedCursor />
-              {/* Sidebar */}
-              <aside className="w-full sm:w-[200px] shrink-0">
-                <LeftContent />
-              </aside>
+            <LenisProvider>
+              <div className="flex flex-col sm:flex-row min-h-screen">
+                <AnimatedCursor />
+                {/* Sidebar */}
+                <aside className="w-full sm:w-[200px] shrink-0">
+                  <LeftContent />
+                </aside>
 
-              {/* Main Content */}
-              <section className="flex-1 min-h-screen relative p-6 overflow-y-auto bg-grid">
-                <div className="relative z-10">{children}</div>
-              </section>
-            </div>
+                {/* Main Content */}
+                <section className="flex-1 min-h-screen relative p-6 overflow-y-auto bg-grid">
+                  <div className="relative z-10">{children}</div>
+                </section>
+              </div>
+            </LenisProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
