@@ -9,9 +9,56 @@
   },
   "FirstPatr": {
     "Avilble": "Available Work",
-    "name": "I'm Abdullah Atef",
+    "name": "Hello ! I'm Abdullah Atef",
     "job": "Software Engineer",
     "locatioon": "Egypt Cairo",
-    "dec": "I am Abdallah, a passionate software engineer specializing in full-stack development. With expertise in both frontend and backend technologies, I create robust, scalable, and user-friendly applications. I enjoy solving complex problems and continuously learning new technologies to stay at the forefront of software development. My goal is to write clean, efficient code and contribute to meaningful projects that make a difference."
+    "dec": "I am Abdallah, a passionate software engineer specializing in full-stack development. With expertise in both frontend and backend technologies, I create robust, scalable, and user-friendly applications. I enjoy solving complex problems and continuously learning new technologies to stay at the forefront of software development. My goal is to write clean, efficient code and contribute to meaningful projects that make a difference.",
+    "downloadCv": "Download Cv",
+    "aboutMe": "About Me",
+    "experinceTitle": "My Experience",
+    "What skills I have": "What skills I have",
+    "My Experience": "My Experience",
+    "Show more": "Show more",
+    "Services": "Services",
+    "What I Offer": "What I Offer",
+    "Ui/Ux": "Ui/Ux",
+    "Performance Optimization": "Performance Optimization",
+    "Clean & Reusable Code": "Clean & Reusable Code",
+    "Ui/Ux dec": "I design responsive and modern user interfaces that provide a smooth user experience across all devices.",
+    "Performance Optimization dec": "I build fast and optimized websites using best practices like lazy loading, caching, and image optimization.",
+    "Clean & Reusable Code dec": "I write clean, reusable, and well-structured code using React, Tailwind CSS, and modern development tools.",
+    "Projects": "Projects",
+    "What They Say": "What They Say",
+    "Rating & Testimonials": "Rating & Testimonials"
+  },
+  "rating": {
+    "title": "What My Clients Say",
+    "review1": {
+      "name": "Ahmed Mohamed",
+      "role": "UI/UX Designer",
+      "text": "Abdallah delivered exceptional quality. His attention to detail and design sense elevated my app’s user experience beyond expectations!"
+    },
+    "review2": {
+      "name": "Sarah Johnson",
+      "role": "Project Manager",
+      "text": "Super reliable and professional! Communication was clear, deadlines were met, and the final product looked stunning."
+    },
+    "review3": {
+      "name": "Mohamed Hassan",
+      "role": "Full Stack Developer",
+      "text": "Working with Abdallah was a pleasure. His code is clean, efficient, and easy to maintain. Highly recommend him for any web project."
+    },
+    "review4": {
+      "name": "Ahmed Ali",
+      "role": "Project Manager",
+      "text": "My request was to modify, upload, and organize my website. The project was completed.Abdullah, thank God, is professional in his work and knows how to use websites and programming. He completed my request in record time.Prompt and respectful communication. I highly recommend him based on my experience.Thank you, Abdullah. We will work together again, God willing."
+    }
+  },
+  "connects": {
+    "title": "Let's Connect &",
+    "titleHighlight": "Create Together",
+    "description": "I'm always looking for opportunities to collaborate, learn, and create. Whether you have a project in mind or just want to connect, I'd love to hear from you!",
+    "getInTouch": "Get in Touch",
+    "viewGitHub": "View My GitHub"
   }
 }

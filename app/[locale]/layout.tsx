@@ -8,6 +8,7 @@ import { ThemeProvider } from "next-themes";
 import LeftContent from "@/components/LeftContent";
 import AnimatedCursor from "@/components/ui/AnimatedCursor";
 import LenisProvider from "@/components/ui/LenisProvider";
+import Footer from "@/components/ui/Footer";
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -61,6 +62,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                 {/* Main Content */}
                 <section className="flex-1 min-h-screen relative p-6 overflow-y-auto bg-grid">
                   <div className="relative z-10">{children}</div>
+                  <Footer />
                 </section>
               </div>
             </LenisProvider>

@@ -28,7 +28,8 @@ function LeftContent() {
         className="
           hidden md:flex
           flex-col items-center justify-between
-          h-screen
+          h-full
+          fixed 
           w-[200px]
           bg-white dark:bg-black
           transition-all duration-300
