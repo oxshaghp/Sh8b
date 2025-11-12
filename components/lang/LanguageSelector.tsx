@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter, usePathname, getPathname } from "@/i18n/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import {
   Select,
@@ -71,13 +71,14 @@ export default function LanguageSelector() {
     setIsChanging(true);
     setLoading(true);
 
+    // إزالة المسار الحالي من اللغة القديمة
+    const pathWithoutLocale = pathname.replace(`/${locale}`, "");
+    const newPath = `/${newLocale}${pathWithoutLocale}`;
+
     // تأخير بسيط لإظهار اللودينج
     await new Promise((resolve) => setTimeout(resolve, 500));
 
-    // استخدام getPathname لبناء المسار مع locale الجديد
-    // pathname من usePathname يعيد المسار بدون locale prefix
-    const newPath = getPathname({ locale: newLocale, href: pathname });
-    router.replace(newPath);
+    router.push(newPath);
   };
 
   useEffect(() => {

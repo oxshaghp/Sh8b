@@ -1,7 +1,7 @@
 import ProjectGallery from "@/components/ui/ProjectGallery";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 
 export default function ProjectsPage() {
   const t = useTranslations("ProjectsPage");
