@@ -31,6 +31,104 @@
     "What They Say": "What They Say",
     "Rating & Testimonials": "Rating & Testimonials"
   },
+  "AboutPage": {
+    "workSection": {
+      "badge": "About My Work",
+      "title": "How do I turn ideas into real products?"
+    },
+    "focusAreas": {
+      "product": {
+        "title": "Product-Led Mindset",
+        "description": "I focus on solving real user problems with experiences that feel intentional and effortless."
+      },
+      "fullStack": {
+        "title": "Full-Stack Flexibility",
+        "description": "I bridge the gap between design and engineering to deliver cohesive, end-to-end solutions."
+      },
+      "collaboration": {
+        "title": "Growth & Collaboration",
+        "description": "I build strong partnerships with teams and clients to keep projects aligned with their goals."
+      }
+    },
+    "journeySection": {
+      "badge": "My Journey",
+      "title": "Milestones Along the Way",
+      "highlight": "Still Growing"
+    },
+    "milestones": {
+      "foundation": {
+        "year": "2021",
+        "title": "Foundations & Exploration",
+        "description": "I launched my coding journey by experimenting with small web ideas and refining core skills."
+      },
+      "expansion": {
+        "year": "2022 - 2023",
+        "title": "Project Expansion",
+        "description": "I delivered full-stack client work while mastering Next.js, Tailwind CSS, and modern workflows."
+      },
+      "present": {
+        "year": "2024 - Present",
+        "title": "Advancing Craft",
+        "description": "I focus on performance, product impact, and guiding teams toward meaningful shipping."
+      }
+    }
+  },
+  "ProjectsPage": {
+    "hero": {
+      "badge": "Featured Work",
+      "title": "Projects I’ve delivered with care",
+      "description": "From full-stack platforms to immersive interfaces, here’s a look at the products I loved building with amazing collaborators.",
+      "primaryAction": "Start a new project",
+      "secondaryAction": "Learn more about me"
+    }
+  },
+  "ProjectsCommon": {
+    "live": "Live View",
+    "repo": "GitHub Repo"
+  },
+  "ContactPage": {
+    "hero": {
+      "badge": "Let’s work together",
+      "title": "Tell me about your next big idea",
+      "description": "Share details about your project, goals, or challenges. I’ll get back to you with next steps and how we can collaborate.",
+      "primaryAction": "Email me directly",
+      "secondaryAction": "Chat on WhatsApp"
+    },
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "message": "How can I help?",
+      "messagePlaceholder": "Share anything about scope, timeline, or expectations.",
+      "helper": "I aim to reply within 24 hours on business days.",
+      "submit": "Send message",
+      "submitting": "Sending..."
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions",
+      "description": "Quick answers to the topics that usually pop up before we start working together.",
+      "items": {
+        "projectScope": {
+          "question": "What kind of projects do you usually take on?",
+          "answer": "I focus on web experiences—landing pages, dashboards, full-stack web apps, and design-to-code conversions. If it’s about crafting a polished digital product, I’m in."
+        },
+        "timeline": {
+          "question": "How soon can you start and how long do projects take?",
+          "answer": "Availability depends on my current pipeline, but I usually start within one to two weeks. Smaller engagements can wrap in days, while larger builds may take several weeks."
+        },
+        "collaboration": {
+          "question": "How do we collaborate during the project?",
+          "answer": "We’ll define milestones, communicate through your preferred tools, and share progress updates frequently. I’m comfortable joining your existing workflow or recommending one."
+        }
+      }
+    },
+    "toast": {
+      "success": "Thanks! Your message is on its way.",
+      "error": "Hmm, something went wrong. Please try again."
+    }
+  },
   "rating": {
     "title": "What My Clients Say",
     "review1": {

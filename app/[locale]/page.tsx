@@ -3,14 +3,14 @@ import { useTranslations } from "next-intl";
 import { LuMapPin } from "react-icons/lu";
 import { BsBookmarkFill } from "react-icons/bs";
 import Link from "next/link";
-import { experinceData } from "@/lib/data";
-import { projectData } from "@/lib/data";
+import { experinceData, projectData, siteLinks } from "@/lib/data";
 import Image from "next/image";
 import { MdCleaningServices } from "react-icons/md";
 import { IoSpeedometer } from "react-icons/io5";
 import { FaCode } from "react-icons/fa";
 import Rating from "@/components/ui/Rating";
 import Connects from "@/components/ui/Conects";
+import ProjectCard from "@/components/ui/ProjectCard";
 export default function HomePage() {
   const t = useTranslations("FirstPatr");
   return (
@@ -43,16 +43,19 @@ export default function HomePage() {
         </div>
         {/* Btn */}
         <div className="flex justify-start items-center gap-4 mt-10">
-          <Button variant={"default"} size={"lg"} className="cursor-pointer">
+          <Button variant={"default"} size={"lg"} asChild>
             <Link href="about">{t("aboutMe")}</Link>
           </Button>
           <Button
             variant={"outline"}
             size={"lg"}
-            className="flex justify-center items-center gap-2 cursor-pointer"
+            className="flex justify-center items-center gap-2"
+            asChild
           >
-            <BsBookmarkFill />
-            {t("downloadCv")}
+            <Link href={siteLinks.cv} target="_blank" rel="noopener noreferrer">
+              <BsBookmarkFill />
+              {t("downloadCv")}
+            </Link>
           </Button>
         </div>
         {/* Experince */}
@@ -91,9 +94,10 @@ export default function HomePage() {
             <Button
               variant={"default"}
               size={"lg"}
-              className="flex justify-center items-center gap-2 cursor-pointer "
+              className="flex justify-center items-center gap-2"
+              asChild
             >
-              <Link href="/">{t("Show more")}</Link>
+              <Link href="projects">{t("Show more")}</Link>
             </Button>
           </div>
         </div>
@@ -155,49 +159,19 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="px-6 py-10 transition-colors duration-300">
-            <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
-              {projectData.map((item) => (
-                <div
-                  key={item.id}
-                  className="w-full sm:w-[300px] md:w-[330px] lg:w-[350px] bg-white dark:bg-[#1b1b1b] rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className="overflow-hidden rounded-xl">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      width={320}
-                      height={180}
-                      className="rounded-xl hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-
-                  <div className="mt-4 text-left">
-                    <h3 className="font-bold text-lg text-gray-800 dark:text-white">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                      {item.dec}
-                    </p>
-
-                    {/* skills buttons */}
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {item.Skils.map((skill, index) => (
-                        <Button variant={"outline"} size={"sm"} key={index}>
-                          {skill}
-                        </Button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+            <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 xl:grid-cols-3">
+              {projectData.slice(0, 3).map((item) => (
+                <ProjectCard key={item.id} project={item} />
               ))}
             </div>
-            <div className="flex justify-center mt-12">
+            <div className="mt-12 flex justify-center">
               <Button
                 variant={"default"}
                 size={"lg"}
-                className="flex justify-center items-center gap-2 cursor-pointer "
+                className="flex items-center gap-2"
+                asChild
               >
-                {t("Show more")}
+                <Link href="projects">{t("Show more")}</Link>
               </Button>
             </div>
           </div>

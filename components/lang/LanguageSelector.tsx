@@ -9,8 +9,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import PageLoader from "@/components/ui/PageLoader";
 
 // 🇺🇸 علم أمريكا
@@ -63,6 +63,7 @@ export default function LanguageSelector() {
   const locale = useLocale();
   const [isChanging, setIsChanging] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [currentPath, setCurrentPath] = useState(pathname);
 
   const handleLanguageChange = async (newLocale: string) => {
     if (newLocale === locale) return;
@@ -79,6 +80,14 @@ export default function LanguageSelector() {
 
     router.push(newPath);
   };
+
+  useEffect(() => {
+    if (pathname !== currentPath) {
+      setCurrentPath(pathname);
+      setLoading(false);
+      setIsChanging(false);
+    }
+  }, [pathname, currentPath]);
 
   const currentLanguage = languages.find((lang) => lang.code === locale);
 

@@ -9,6 +9,7 @@ import LeftContent from "@/components/LeftContent";
 import AnimatedCursor from "@/components/ui/AnimatedCursor";
 import LenisProvider from "@/components/ui/LenisProvider";
 import Footer from "@/components/ui/Footer";
+import { ToastProvider } from "@/components/providers/ToastProvider";
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -54,6 +55,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <LenisProvider>
               <div className="flex flex-col sm:flex-row min-h-screen">
                 <AnimatedCursor />
+                <ToastProvider />
                 {/* Sidebar */}
                 <aside className="w-full sm:w-[200px] shrink-0">
                   <LeftContent />
