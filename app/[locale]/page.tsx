@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { LuMapPin } from "react-icons/lu";
 import { BsBookmarkFill } from "react-icons/bs";
 import Link from "next/link";
+import { Link as I18nLink } from "@/i18n/navigation";
 import { experinceData, projectData, siteLinks } from "@/lib/data";
 import Image from "next/image";
 import { MdCleaningServices } from "react-icons/md";
@@ -44,7 +45,7 @@ export default function HomePage() {
         {/* Btn */}
         <div className="flex justify-start items-center gap-4 mt-10">
           <Button variant={"default"} size={"lg"} asChild>
-            <Link href="about">{t("aboutMe")}</Link>
+            <I18nLink href="/about">{t("aboutMe")}</I18nLink>
           </Button>
           <Button
             variant={"outline"}
@@ -97,7 +98,7 @@ export default function HomePage() {
               className="flex justify-center items-center gap-2"
               asChild
             >
-              <Link href="projects">{t("Show more")}</Link>
+              <I18nLink href="/projects">{t("Show more")}</I18nLink>
             </Button>
           </div>
         </div>
@@ -171,7 +172,7 @@ export default function HomePage() {
                 className="flex items-center gap-2"
                 asChild
               >
-                <Link href="projects">{t("Show more")}</Link>
+                <I18nLink href="/projects">{t("Show more")}</I18nLink>
               </Button>
             </div>
           </div>

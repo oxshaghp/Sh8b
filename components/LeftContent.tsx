@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Link as I18nLink } from "@/i18n/navigation";
 import {
   FolderIcon,
   HomeIcon,
@@ -120,7 +121,7 @@ function LeftContent() {
               { href: "/projects", icon: FolderIcon, text: t("projects") },
               { href: "/contact", icon: MailIcon, text: t("contact") },
             ].map((item, i) => (
-              <Link href={item.href} key={i} className="w-full">
+              <I18nLink href={item.href} key={i} className="w-full">
                 <Button
                   variant="ghost"
                   className="w-full flex items-center justify-start cursor-pointer gap-4 px-8 py-3 text-left hover:bg-gray-100 dark:hover:bg-gray-900 transition"
@@ -131,7 +132,7 @@ function LeftContent() {
                   {/* text */}
                   <span className="text-lg font-medium">{item.text}</span>
                 </Button>
-              </Link>
+              </I18nLink>
             ))}
           </motion.div>
 
@@ -209,7 +210,7 @@ function LeftContent() {
                 { href: "/projects", icon: FolderIcon, text: t("projects") },
                 { href: "/contact", icon: MailIcon, text: t("contact") },
               ].map((item, i) => (
-                <Link
+                <I18nLink
                   key={i}
                   href={item.href}
                   onClick={() => setOpen(false)}
@@ -217,7 +218,7 @@ function LeftContent() {
                 >
                   <item.icon className="size-5" />
                   <span>{item.text}</span>
-                </Link>
+                </I18nLink>
               ))}
             </div>
 
